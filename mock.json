@@ -1,0 +1,3216 @@
+{
+    "source": "mockoon:1.14.1",
+    "data": [
+        {
+            "type": "environment",
+            "item": {
+                "uuid": "",
+                "lastMigration": 15,
+                "name": "orapronobis",
+                "endpointPrefix": "",
+                "latency": 0,
+                "port": 3002,
+                "routes": [
+                    {
+                        "uuid": "",
+                        "documentation": "Adicionar novo endereço",
+                        "method": "post",
+                        "endpoint": "endereco",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"id_endereco\": {{faker 'random.number'}},\n  \"cep\": \"\",\n  \"logradouro\": \"\",\n  \"numero\": {{faker 'random.number'}},\n  \"complemento\": \"\",\n  \"bairro\": \"\",\n  \"cidade\": \"\",\n  \"estado\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 201,
+                                "label": "Endereco criado no sistema",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 401,
+                                "label": "Não autorizado",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 403,
+                                "label": "Proibido",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 404,
+                                "label": "Dados informados não encontrados.",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 500,
+                                "label": "Erro interno - servidor",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 503,
+                                "label": "Serviço indisponível",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 504,
+                                "label": "Timeout",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "Buscar endereço por id",
+                        "method": "get",
+                        "endpoint": "endereco/:id_endereco",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "OK - Get testado com sucesso",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 401,
+                                "label": "Não autorizado",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 403,
+                                "label": "Proibido",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 404,
+                                "label": "Dados informados não encontrados.",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 500,
+                                "label": "Erro interno - servidor",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 503,
+                                "label": "Serviço indisponível",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 504,
+                                "label": "Timeout",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "Alterar endereço cadastrado",
+                        "method": "put",
+                        "endpoint": "endereco/:id_endereco",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "OK - PUT testado com sucesso",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 401,
+                                "label": "Não autorizado",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 403,
+                                "label": "Proibido",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 404,
+                                "label": "Dados informados não encontrados.",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 500,
+                                "label": "Erro interno - servidor",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 503,
+                                "label": "Serviço indisponível",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 504,
+                                "label": "Timeout",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "Excluir endereço por id",
+                        "method": "delete",
+                        "endpoint": "endereco/:id_endereco",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "OK - Delete testado com sucesso",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 401,
+                                "label": "Não autorizado",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 403,
+                                "label": "Proibido",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 404,
+                                "label": "Dados informados não encontrados.",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 500,
+                                "label": "Erro interno - servidor",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 503,
+                                "label": "Serviço indisponível",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 504,
+                                "label": "Timeout",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "Atualizar Endereço",
+                        "method": "patch",
+                        "endpoint": "endereco/:id_endereco",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "OK - PATCH testado com sucesso",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "Buscar perfil",
+                        "method": "get",
+                        "endpoint": "perfil",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "OK - GET testado com sucesso!",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 401,
+                                "label": "Não autorizado",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 403,
+                                "label": "Proibido",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 404,
+                                "label": "Dados informados não encontrados.",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 500,
+                                "label": "Erro interno - servidor",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 503,
+                                "label": "Serviço indisponível",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 504,
+                                "label": "Timeout",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "Criar Perfil",
+                        "method": "post",
+                        "endpoint": "perfil",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"id_perfil\": {{faker 'random.number'}},\n  \"nome_perfil\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 201,
+                                "label": "OK - POST testado com sucesso!",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 401,
+                                "label": "Não autorizado",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 403,
+                                "label": "Proibido",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 404,
+                                "label": "Dados informados não encontrados.",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 500,
+                                "label": "Erro interno - servidor",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 503,
+                                "label": "Serviço indisponível",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 504,
+                                "label": "Timeout",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "Leitura do perfil",
+                        "method": "get",
+                        "endpoint": "perfil/:id_perfil",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "Ok - Get testado com sucesso",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 401,
+                                "label": "Não autorizado",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 403,
+                                "label": "Proibido",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 404,
+                                "label": "Dados informados não encontrados.",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 500,
+                                "label": "Erro interno - servidor",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 503,
+                                "label": "Serviço indisponível",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 504,
+                                "label": "Timeout",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "Atualizar Perfil",
+                        "method": "put",
+                        "endpoint": "perfil/:id_perfil",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "OK - PUT testado com sucesso",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 401,
+                                "label": "Não autorizado",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 403,
+                                "label": "Proibido",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 404,
+                                "label": "Dados informados não encontrados.",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 500,
+                                "label": "Erro interno - servidor",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 503,
+                                "label": "Serviço indisponível",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 504,
+                                "label": "Timeout",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "Excluir Perfil",
+                        "method": "delete",
+                        "endpoint": "perfil/:id_perfil",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "OK - DELETE testado com sucesso",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 401,
+                                "label": "Não autorizado",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 403,
+                                "label": "Proibido",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 404,
+                                "label": "Dados informados não encontrados.",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 500,
+                                "label": "Erro interno - servidor",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 503,
+                                "label": "Serviço indisponível",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 504,
+                                "label": "Timeout",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "Ler cadastro do usuário",
+                        "method": "get",
+                        "endpoint": "usuario/:id_usuario",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "OK - GET testado com sucesso",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 401,
+                                "label": "Não autorizado",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 403,
+                                "label": "Proibido",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 404,
+                                "label": "Dados informados não encontrados.",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 500,
+                                "label": "Erro interno - servidor",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 503,
+                                "label": "Serviço indisponível",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 504,
+                                "label": "Timeout",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "Atualizar cadastro do usuário",
+                        "method": "put",
+                        "endpoint": "usuario/:id_usuario",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "OK - PUT testado com sucesso",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 401,
+                                "label": "Não autorizado",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 403,
+                                "label": "Proibido",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 404,
+                                "label": "Dados informados não encontrados.",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 500,
+                                "label": "Erro interno - servidor",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 503,
+                                "label": "Serviço indisponível",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 504,
+                                "label": "Timeout",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "Eliminar o cadastro do usuário",
+                        "method": "delete",
+                        "endpoint": "usuario/:id_usuario",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "OK - DELETE testado com sucesso",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 401,
+                                "label": "Não autorizado",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 403,
+                                "label": "Proibido",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 404,
+                                "label": "Dados informados não encontrados.",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 500,
+                                "label": "Erro interno - servidor",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 503,
+                                "label": "Serviço indisponível",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 504,
+                                "label": "Timeout",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "Cadastro do usuário",
+                        "method": "post",
+                        "endpoint": "usuario",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"id_user\": {{faker 'random.number'}},\n  \"perfil\": {\n    \"id_perfil\": {{faker 'random.number'}},\n    \"nome_perfil\": \"\"\n  },\n  \"endereco\": {\n    \"id_endereco\": {{faker 'random.number'}},\n    \"cep\": \"\",\n    \"logradouro\": \"\",\n    \"numero\": {{faker 'random.number'}},\n    \"complemento\": \"\",\n    \"bairro\": \"\",\n    \"cidade\": \"\",\n    \"estado\": \"\"\n  },\n  \"nome\": \"\",\n  \"email\": \"\",\n  \"cpf\": \"\",\n  \"cnpj\": \"\",\n  \"senha\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 201,
+                                "label": "Created  - POST testado com sucesso",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 401,
+                                "label": "Não autorizado",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 403,
+                                "label": "Proibido",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 404,
+                                "label": "Dados informados não encontrados.",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 500,
+                                "label": "Erro interno - servidor",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 503,
+                                "label": "Serviço indisponível",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 504,
+                                "label": "Timeout",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "Adicionar novo item",
+                        "method": "post",
+                        "endpoint": "item",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"id_item\": {{faker 'random.number'}},\n  \"produtor\": {\n    \"id_user\": {{faker 'random.number'}},\n    \"perfil\": {\n      \"id_perfil\": {{faker 'random.number'}},\n      \"nome_perfil\": \"\"\n    },\n    \"endereco\": {\n      \"id_endereco\": {{faker 'random.number'}},\n      \"cep\": \"\",\n      \"logradouro\": \"\",\n      \"numero\": {{faker 'random.number'}},\n      \"complemento\": \"\",\n      \"bairro\": \"\",\n      \"cidade\": \"\",\n      \"estado\": \"\"\n    },\n    \"nome\": \"\",\n    \"email\": \"\",\n    \"cpf\": \"\",\n    \"cnpj\": \"\",\n    \"senha\": \"\"\n  },\n  \"nome\": \"\",\n  \"um\": \"\",\n  \"qtd\": {{faker 'random.number'}},\n  \"valor\": {{faker 'random.number'}}\n}",
+                                "latency": 0,
+                                "statusCode": 201,
+                                "label": "Created - POST testado com sucesso!",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 401,
+                                "label": "Não autorizado",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 403,
+                                "label": "Proibido",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 404,
+                                "label": "Dados informados não encontrados.",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 500,
+                                "label": "Erro interno - servidor",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 503,
+                                "label": "Serviço indisponível",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 504,
+                                "label": "Timeout",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "Fazer leitura do item",
+                        "method": "get",
+                        "endpoint": "item/:id_item",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "OK - GET testado com sucesso",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 401,
+                                "label": "Não autorizado",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 403,
+                                "label": "Proibido",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 404,
+                                "label": "Dados informados não encontrados.",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 500,
+                                "label": "Erro interno - servidor",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 503,
+                                "label": "Serviço indisponível",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 504,
+                                "label": "Timeout",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "Atualizar item",
+                        "method": "put",
+                        "endpoint": "item/:id_item",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "OK - PUT testado com sucesso",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 401,
+                                "label": "Não autorizado",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 403,
+                                "label": "Proibido",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 404,
+                                "label": "Dados informados não encontrados.",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 500,
+                                "label": "Erro interno - servidor",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 503,
+                                "label": "Serviço indisponível",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 504,
+                                "label": "Timeout",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "Atualizar Item",
+                        "method": "patch",
+                        "endpoint": "item/:id_item",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "OK",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 401,
+                                "label": "Não autorizado",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 403,
+                                "label": "Proibido",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 404,
+                                "label": "Dados informados não encontrados.",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 500,
+                                "label": "Erro interno - servidor",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 503,
+                                "label": "Serviço indisponível",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 504,
+                                "label": "Timeout",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "Excluir Item",
+                        "method": "delete",
+                        "endpoint": "item/:id_item",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "OK - Delete testado com sucesso",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 401,
+                                "label": "Não autorizado",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 403,
+                                "label": "Proibido",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 404,
+                                "label": "Dados informados não encontrados.",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 500,
+                                "label": "Erro interno - servidor",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 503,
+                                "label": "Serviço indisponível",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 504,
+                                "label": "Timeout",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "Adicionar novo pedido",
+                        "method": "post",
+                        "endpoint": "pedido",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "",
+                                "latency": 0,
+                                "statusCode": 201,
+                                "label": "Created - POST testado com sucesso!",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 401,
+                                "label": "Não autorizado",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 403,
+                                "label": "Proibido",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 404,
+                                "label": "Dados informados não encontrados.",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 500,
+                                "label": "Erro interno - servidor",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 503,
+                                "label": "Serviço indisponível",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 504,
+                                "label": "Timeout",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "Leitura do item",
+                        "method": "get",
+                        "endpoint": "pedido/:id_pedido",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"id_pedido\": {{faker 'random.number'}},\n  \"cliente\": {\n    \"id_user\": {{faker 'random.number'}},\n    \"perfil\": {\n      \"id_perfil\": {{faker 'random.number'}},\n      \"nome_perfil\": \"\"\n    },\n    \"endereco\": {\n      \"id_endereco\": {{faker 'random.number'}},\n      \"cep\": \"\",\n      \"logradouro\": \"\",\n      \"numero\": {{faker 'random.number'}},\n      \"complemento\": \"\",\n      \"bairro\": \"\",\n      \"cidade\": \"\",\n      \"estado\": \"\"\n    },\n    \"nome\": \"\",\n    \"email\": \"\",\n    \"cpf\": \"\",\n    \"cnpj\": \"\",\n    \"senha\": \"\"\n  },\n  \"estoqueFacilitador\": {\n    \"id_estoqueFacil\": {{faker 'random.number'}},\n    \"facilitador\": {\n      \"id_user\": {{faker 'random.number'}},\n      \"perfil\": {\n        \"id_perfil\": {{faker 'random.number'}},\n        \"nome_perfil\": \"\"\n      },\n      \"endereco\": {\n        \"id_endereco\": {{faker 'random.number'}},\n        \"cep\": \"\",\n        \"logradouro\": \"\",\n        \"numero\": {{faker 'random.number'}},\n        \"complemento\": \"\",\n        \"bairro\": \"\",\n        \"cidade\": \"\",\n        \"estado\": \"\"\n      },\n      \"nome\": \"\",\n      \"email\": \"\",\n      \"cpf\": \"\",\n      \"cnpj\": \"\",\n      \"senha\": \"\"\n    },\n    \"item\": {\n      \"id_item\": {{faker 'random.number'}},\n      \"produtor\": {\n        \"id_user\": {{faker 'random.number'}},\n        \"perfil\": {\n          \"id_perfil\": {{faker 'random.number'}},\n          \"nome_perfil\": \"\"\n        },\n        \"endereco\": {\n          \"id_endereco\": {{faker 'random.number'}},\n          \"cep\": \"\",\n          \"logradouro\": \"\",\n          \"numero\": {{faker 'random.number'}},\n          \"complemento\": \"\",\n          \"bairro\": \"\",\n          \"cidade\": \"\",\n          \"estado\": \"\"\n        },\n        \"nome\": \"\",\n        \"email\": \"\",\n        \"cpf\": \"\",\n        \"cnpj\": \"\",\n        \"senha\": \"\"\n      },\n      \"nome\": \"\",\n      \"um\": \"\",\n      \"qtd\": {{faker 'random.number'}},\n      \"valor\": {{faker 'random.number'}}\n    },\n    \"qtd\": \"\",\n    \"valor\": \"\"\n  },\n  \"qtd\": {{faker 'random.number'}},\n  \"status\": {\n    \"id_status\": {{faker 'random.number'}},\n    \"nome\": \"\"\n  }\n}",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "OK - GET testado com sucesso!",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 401,
+                                "label": "Não autorizado",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 403,
+                                "label": "Proibido",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 404,
+                                "label": "Dados informados não encontrados.",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 500,
+                                "label": "Erro interno - servidor",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 503,
+                                "label": "Serviço indisponível",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 504,
+                                "label": "Timeout",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "Atualizar pedido",
+                        "method": "put",
+                        "endpoint": "pedido/:id_pedido",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "OK - PUT testado com sucesso",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 401,
+                                "label": "Não autorizado",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 403,
+                                "label": "Proibido",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 404,
+                                "label": "Dados informados não encontrados.",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 500,
+                                "label": "Erro interno - servidor",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 503,
+                                "label": "Serviço indisponível",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 504,
+                                "label": "Timeout",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "Excluir Pedido",
+                        "method": "delete",
+                        "endpoint": "pedido/:id_pedido",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "OK - Delete testado com sucesso",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 401,
+                                "label": "Não autorizado",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 403,
+                                "label": "Proibido",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 404,
+                                "label": "Dados informados não encontrados.",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 500,
+                                "label": "Erro interno - servidor",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 503,
+                                "label": "Serviço indisponível",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 504,
+                                "label": "Timeout",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "Geracao de relatorio",
+                        "method": "get",
+                        "endpoint": "relatorio/:nomeRelatorio",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "GET testado com sucesso",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 401,
+                                "label": "Não autorizado",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 403,
+                                "label": "Proibido",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 404,
+                                "label": "Dados informados não encontrados.",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 500,
+                                "label": "Erro interno - servidor",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 503,
+                                "label": "Serviço indisponível",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"type\": \"\",\n  \"title\": \"\",\n  \"status\": {{faker 'random.number'}},\n  \"detail\": \"\",\n  \"instance\": \"\"\n}",
+                                "latency": 0,
+                                "statusCode": 504,
+                                "label": "Timeout",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    }
+                ],
+                "proxyMode": false,
+                "proxyHost": "",
+                "proxyRemovePrefix": false,
+                "https": false,
+                "cors": true,
+                "headers": [],
+                "proxyReqHeaders": [
+                    {
+                        "key": "",
+                        "value": ""
+                    }
+                ],
+                "proxyResHeaders": [
+                    {
+                        "key": "",
+                        "value": ""
+                    }
+                ]
+            }
+        }
+    ]
+}
